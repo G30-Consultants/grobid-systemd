@@ -15,4 +15,5 @@ gradle-app.setting
 
 # generic editor bak files
 
-.bak
+
+*.bak
