@@ -3,11 +3,10 @@ Description=Grobid Journal Service
 After=network.target
 
 [Service]
-StartLimitIntervalSec=0[Service]
 Type=simple
 Restart=on-failure
 WorkingDirectory=/opt/grobid
-ExecStart=gradlew run
+ExecStart=/opt/grobid/gradlew run
 ExecStop=
 User=grobid
 SyslogIdentifier=grobid
