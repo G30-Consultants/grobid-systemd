@@ -6,7 +6,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=grobid
-ExecStart=/opt/grobid/gradlew run
+ExecStart=/opt/grobid ./gradlew run
 
 [Install]
 WantedBy=multi-user.target
