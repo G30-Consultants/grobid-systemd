@@ -1,12 +1,18 @@
 [Unit]
 Description=Grobid Journal Service
 After=network.target
+
+[Service]
 StartLimitIntervalSec=0[Service]
 Type=simple
-Restart=always
-RestartSec=1
+Restart=on-failure
+WorkingDirectory=/opt/grobid
+ExecStart=gradlew run
+ExecStop=
 User=grobid
-ExecStart=/opt/grobid ./gradlew run
+SyslogIdentifier=grobid
+RestartSec=5
+TimeoutStartSec=infinity
 
 [Install]
 WantedBy=multi-user.target
