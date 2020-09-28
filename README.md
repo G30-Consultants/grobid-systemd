@@ -8,7 +8,7 @@ The shell script copies the service file and runs the systemd enable command.
 
 Grobid should be built as a standalone server as in 
 
---
+~~~
 ./gradlew clean assemble
 cd ..
 mkdir grobid-installation
@@ -17,7 +17,7 @@ unzip ../grobid/grobid-service/build/distributions/grobid-service-0.6.1.zip
 mv grobid-service-0.6.1 grobid-service
 unzip ../grobid/grobid-home/build/distributions/grobid-home-0.6.1.zip
 ./grobid-service/bin/grobid-service server grobid-service/config/config.yaml
---
+~~~
 
 Adjust the config.yaml in /grobid/grobid-service/config/config.yaml setting the absolute path for grobid-home and making sure the port is as expected. The current default is 8070 not 8080.
 
